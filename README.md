@@ -1,0 +1,2 @@
+# jfxskol
+JavaFx Learning project
