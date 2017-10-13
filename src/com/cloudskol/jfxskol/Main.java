@@ -19,7 +19,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
+        System.out.println("start called");
 //        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
 
@@ -34,6 +35,19 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+        System.out.println("Init called");
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+
+        System.out.println("stop called");
     }
 
     private void renderUi(VBox container) {
