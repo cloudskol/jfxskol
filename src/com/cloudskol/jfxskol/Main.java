@@ -1,5 +1,6 @@
 package com.cloudskol.jfxskol;
 
+import com.cloudskol.jfxskol.binding.BindingEntry;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -25,8 +26,10 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
 
         final VBox vBox = new VBox();
-        vBox.setSpacing(10);
-        renderUi(vBox);
+//        vBox.setSpacing(10);
+//        renderUi(vBox);
+
+        new BindingEntry().testBind();
 
         primaryStage.setScene(new Scene(vBox, 700, 400));
         primaryStage.show();
