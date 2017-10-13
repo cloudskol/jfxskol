@@ -20,7 +20,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        System.out.println("start called");
+        System.out.println("Start: " + Thread.currentThread().getName());
 //        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
 
@@ -39,15 +39,12 @@ public class Main extends Application {
 
     @Override
     public void init() throws Exception {
-        super.init();
-        System.out.println("Init called");
+        System.out.println("Init: " + Thread.currentThread().getName());
     }
 
     @Override
     public void stop() throws Exception {
-        super.stop();
-
-        System.out.println("stop called");
+        System.out.println("Stop: " + Thread.currentThread().getName());
     }
 
     private void renderUi(VBox container) {
