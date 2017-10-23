@@ -1,6 +1,7 @@
 package com.cloudskol.jfxskol;
 
 import com.cloudskol.jfxskol.binding.BindingEntry;
+import com.cloudskol.jfxskol.binding.DirectionalBinding;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -29,7 +30,8 @@ public class Main extends Application {
 //        vBox.setSpacing(10);
 //        renderUi(vBox);
 
-        new BindingEntry().testBind();
+//        new BindingEntry().testBind();
+        new DirectionalBinding().testDirectional();
 
         primaryStage.setScene(new Scene(vBox, 700, 400));
         primaryStage.show();
