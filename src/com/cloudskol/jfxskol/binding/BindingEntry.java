@@ -1,5 +1,9 @@
 package com.cloudskol.jfxskol.binding;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+
 import java.beans.PropertyChangeEvent;
 
 /**
@@ -14,6 +18,17 @@ public class BindingEntry {
         person.setSalary(3000);
 
         person.setSalary(4000);
+
+        final SimpleStringProperty stringProperty = new SimpleStringProperty(this, "Tham", "Arasu");
+        System.out.println(stringProperty.getBean().getClass().getName());
+        System.out.println(stringProperty.get());
+        System.out.println(stringProperty.getName());
+
+        stringProperty.addListener(
+                (observable, oldValue, newValue) -> System.out.println("Changed with new value: " + newValue));
+
+        stringProperty.set("Hello");
+        System.out.println("Here " + stringProperty.get());
     }
 
     public static void handlePropertyChangeEvent(PropertyChangeEvent pe) {

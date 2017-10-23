@@ -1,5 +1,7 @@
 package com.cloudskol.jfxskol.binding;
 
+import javafx.beans.property.SimpleStringProperty;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
